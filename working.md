@@ -73,13 +73,31 @@ What is it...
 
 #### My perspective...
 
-Machine learning is programmatically using statistics on data to do things we would normally program. 
+> Machine learning is using statistics and data to replace the need for explicit programming. 
+
+or put another way... 
+
+>  "Using math to do the hard parts of your job."
+
+### Why does it matter? 
+
+This may be a little bit of an exaduration... if you don't learn this stuff you are probably going to be out of a job.
+
+#### Machine learning has a lot of subtopics:
+
+* Supervised Learning (I know what I want)
+* Unsupervised Learning (Here's data, tell me something I didn't know)
+
+* Regression (how this thing relates to this other thing), 
+* Classification (how these things are a like and different)
+* Clustering algorithms (theres a bunch of groups find the groups)
+* Reinforcement learning (Rewards good behavior)
+* Artificial Neural Networks (Making ML harder by explaining with graphs)
+* Convolutional Neural Networks (In case explaining ANNs weren't hard enough)
+
+* Deep learning (Another reason to buy Google, Amazon, and Microsoft Stock)
 
 
-
-Why does it matter
-
-Explain in one sentence what each of the major aspects are. 
 
 
 
