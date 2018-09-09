@@ -19,7 +19,7 @@ For those of you who are new to the group, APIs and IPAs has only a little to do
 
 We added a few things to the format, such as this spring we did a charity hackathon, and this fall I'd like to put together a project surrounding the election. But generally our meetup is Technology and Drinking.
 
-### So Lets talk about Machine Learning in Production?
+### So Let's talk about Machine Learning in Production?
 
 Quick show of hands?
 
@@ -103,7 +103,21 @@ This may be a little bit of an exaduration... if you don't learn this stuff you 
 
 ### About Sacha
 
-- 
+- My math and stats interest began in high school. I graduated Corona High as valedictorian. 
+
+- Although I was accepted to Berkeley, UCLA, and UC San Diego, I decided to go to UCI. 
+
+- After changing my major 6 times or so, I then pursued and completed a Pure Math degree with a minor in statistcs. 
+
+- After graduation, I ran a few tutoring centers for Mathnasium Corporation for about 2 years. 
+
+- Then, I wanted to go back to grad school for Statistics. So, I left Mathnasium, tutored on the side, studied for the GRE, and researched schools. Fate brought me back to UCI.
+
+- And that's where I am now. Being engaged during my first year of grad school was tough and on top of that our wedding was scheduled for one week after the 3 hardest exams I've ever taken in my life. BUT, surprisingly, I passed all three, we still got married, and I will graduate this Spring with a Masters! 
+
+- Anyhow, we've been doing IPAs and APIs since August 2015. We love it, and we're really glad you're here after our small hiatus since April. So, thank you.
+
+   
 
 Twitter handle/ Github handle
 
@@ -153,6 +167,8 @@ Model selection and assessment procedure.
 Train / Test Split
 
 Purpose => 
+
+Dummy Variable Trap
 
 
 
