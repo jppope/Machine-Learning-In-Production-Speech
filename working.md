@@ -2,6 +2,8 @@
 
 
 
+72.10.32.23
+
 Welcome, to another episode of IPAs and APIs ...the support group for people who are too awesome for other Tech meetups.
 
 Formalities...
@@ -28,8 +30,6 @@ How many of you hate it when a speaker polls you at the beginning of a speech?
 Yea... me too. Lol
 
 So I was a sales guy and as a sales guy they professionally trained and taught me how to give a proper speech... so now you know why this is going to suck so bad
-
-What this speech is about
 
 ### Three goals:
 
@@ -89,17 +89,13 @@ This may be a little bit of an exaduration... if you don't learn this stuff you 
 * Unsupervised Learning (Here's data, tell me something I didn't know)
 
 * Regression (how this thing relates to this other thing), 
-* Classification (how these things are a like and different)
-* Clustering algorithms (theres a bunch of groups find the groups)
+* Classification (how these things are alike and different)
+* Clustering algorithms (there's a bunch of groups find the groups)
 * Reinforcement learning (Rewards good behavior)
 * Artificial Neural Networks (Making ML harder by explaining with graphs)
 * Convolutional Neural Networks (In case explaining ANNs weren't hard enough)
 
 * Deep learning (Another reason to buy Google, Amazon, and Microsoft Stock)
-
-
-
-
 
 ### About Sacha
 
