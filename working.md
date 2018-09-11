@@ -29,23 +29,15 @@ How many of you hate it when a speaker polls you at the beginning of a speech?
 
 Yea... me too. Lol
 
-So I was a sales guy and as a sales guy they professionally trained and taught me how to give a proper speech... so now you know why this is going to suck so bad
+[We're going to do the drinking feedback version of hands...]
 
-### Three goals:
+### Goal of this Speech
 
-1. Machine learning is hotter than doughnut grease right now... we'd like to make it more approachable, and give you a "Developers intro"
-2. Help y'all understand what you should be getting paid
-3. Entertain and Delight.
+> Expose you to a basic Machine Learning Production process, and then show a "deployed" version of the data model
 
 ### Sacha and I will be Tag teaming this one...
 
 She's going to cover the data science portion and like all good husband I'm going to do all the hard work. Just kidding.
-
-Actually though I'll tell a quick story... we went on a mini-honeymoon mid-august and when we stopped for lunch, the guide was like... okay everyone lunch is ready, now just to prove that chivalry is not dead we are going to let the only woman on this trip go ahead of everyone else so she can make her husband a sandwich.
-
-Lol. Sacha is the brains of the operation.
-
-But before we get into the meat and potatoes, let me tell you a little bit about me, and then Sacha can tell you a little bit about herself :slightly_smiling_face:
 
 ### About Me
 
@@ -59,7 +51,7 @@ Find me: @jppope and jonpauluritis.com
 
 What is it...
 
-![Machine Learning](/Users/Pope/Desktop/Screen Shot 2018-09-08 at 8.25.08 AM.png)
+![Machine Learning](/Users/Pope/stormcloud/github/mlSpeech/slides/images/mlOverview.png)
 
 
 
@@ -77,21 +69,26 @@ This may be a little bit of an exaduration... if you don't learn this stuff you 
 
 #### Machine learning has a lot of subtopics:
 
-* Supervised Learning (I know what I want)
-* Unsupervised Learning (Here's data, tell me something I didn't know)
+* Supervised Learning 
+  * (I know what I want)
+* Unsupervised Learning
+  * (Here's data, tell me something I didn't know)
+* Regression 
+  * (how this thing relates to this other thing), 
+* Classification 
+  * (how these things are alike and different)
+* Clustering algorithms 
+  * (there's a bunch of groups find the groups)
+* Reinforcement learning 
+  * (Rewards good behavior)
+* Artificial Neural Networks 
+  * (Making ML harder by explaining with graphs)
+* Convolutional Neural Networks 
+  * (In case explaining ANNs weren't hard enough)
+* Deep learning 
+  * (Another reason to buy Google, Amazon, and Microsoft Stock)
 
-* Regression (how this thing relates to this other thing), 
-* Classification (how these things are alike and different)
-* Clustering algorithms (there's a bunch of groups find the groups)
-* Reinforcement learning (Rewards good behavior)
-* Artificial Neural Networks (Making ML harder by explaining with graphs)
-* Convolutional Neural Networks (In case explaining ANNs weren't hard enough)
 
-* Deep learning (Another reason to buy Google, Amazon, and Microsoft Stock)
-
-
-
- Twitter handle/ Github handle
 
 
 
@@ -169,7 +166,7 @@ This survey covered **many** different types of questions. Depending on your goa
 [1] "Web developer; Mobile developer; Embedded applications/devices developer; Machine learning specialist; Data scientist; Graphic designer; Desktop applications developer"
 ```
 
-​	You can deal with this many ways, but what I did was create dummy variables for each category. So, there was one column per selection and if the user classified themselves as a web developer, then the value would be 1 and if not the value would be 0. There was about 20 unique categories. But, for this presentation I only created the top 11 categories.
+	You can deal with this many ways, but what I did was create dummy variables for each category. So, there was one column per selection and if the user classified themselves as a web developer, then the value would be 1 and if not the value would be 0. There was about 20 unique categories. But, for this presentation I only created the top 11 categories.
 
 2. **Some questions had many levels (even though you were only able to choose one) + different forms of 'NAs'.**
 
@@ -178,6 +175,7 @@ This survey covered **many** different types of questions. Depending on your goa
    You can also deal with this many ways, but what I did was eliminate the 'NAs' and narrow down the categories. Particularly for *CompanySize* I created *Nano, Small, Medium, and Large.*
 
 3. **The Uninformed Statistician.**
+
    * Some column names did not match the questions and some questions did not have columns related to it in the dataset. WTF?
 4. **User Error?**
    * In the survey it asks users what their salary is and if they inputted their answer in pay per week, month, or year. However, there was no column for the unit of measure specification. This would have been fine if they already converted the values to be uniform. But, they didn't. The majority of values in *Salary* were values like ```75000``` which obviously meant $75,000 per year. But then you'd run into ```5```. 5? 5 what? If that meant \$5000, then surely it could mean per month. That would make sense when I looked at the rest of that person's data. Well then what do you do with ```30000``` since 30K seems too low and 360K seems too high. 
@@ -213,13 +211,13 @@ Model selection and assessment procedure.
 
 ### Test / Confirm
 
-Train / Test Split
+Note About:  Train / Test Split
 
-Purpose => 
-
-Dummy Variable Trap
+Note About: Dummy Variable Trap
 
 
+
+---
 
 ###So The title of this speech was "Machine Learning in Production"
 
@@ -235,7 +233,7 @@ What are the best libraries / frameworks out there for productionizing ML?
 
 Link
 
-[Reddit Image]
+![Reddit Image](/Users/Pope/stormcloud/github/mlSpeech/slides/images/redditQuestions.png)
 
 Answers: 
 
@@ -250,7 +248,7 @@ Answers:
 
 Or sometimes you get diagrams like this: 
 
-
+![complex](/Users/Pope/stormcloud/github/mlSpeech/slides/images/dataLake.png)
 
 ### If you stop and think about why there isn't a REALLY simple answer... 
 
@@ -292,11 +290,11 @@ Andrew Ng Talks talked about this in his "state of artificial intelligence" spee
 
 This creates a cycle
 
-[data cycle]
+![data cycle](/Users/Pope/stormcloud/github/mlSpeech/slides/images/dataCycle.png)
 
 
 
-### !!!Takeaway: This whole cycle is machine learning in production...!!!
+### Takeaway: This whole cycle is machine learning in production...
 
 (key difference between a software application and an AI / Machine Learning)
 
@@ -308,11 +306,10 @@ This creates a cycle
 
 ### What does a basic web application deployment look like:
 
-
-
 1) Data Model
 
 2) Some sort of an interface
 
-3) Users
+3) A User. 
 
+![Basic](/Users/Pope/stormcloud/github/mlSpeech/slides/images/basic.png)
