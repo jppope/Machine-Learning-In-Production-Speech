@@ -1,9 +1,5 @@
 # Machine Learning in Production
 
-
-
-72.10.32.23
-
 Welcome, to another episode of IPAs and APIs ...the support group for people who are too awesome for other Tech meetups.
 
 Formalities...
@@ -48,10 +44,8 @@ Find me: @jppope and jonpauluritis.com
 
 
 ### Machine Learning Overview
+![Machine Learning](/Users/jonpauluritis/prototype/Machine-Learing-In-Production-Speech/slides/images/AI.png)
 
-What is it...
-
-![Machine Learning](/Users/Pope/stormcloud/github/mlSpeech/slides/images/mlOverview.png)
 
 
 
@@ -140,6 +134,9 @@ This may be a little bit of an exaduration... if you don't learn this stuff you 
 
 ### 1. Our Questions
 
+1. As a developer seeking employment, how do I increase my salary? What factors negatively/positively impact my salary? 
+2. To create a prediction model that will calculate an 'appropriate' salary given a new set of specific covariate values (information), which is expected to come from an employer or job-seeking developer.
+
 ### 2. Get Data
 
 * [Stack Overflow 2018](https://insights.stackoverflow.com/survey/2018/)
@@ -150,6 +147,9 @@ This survey covered **many** different types of questions. Depending on your goa
 
 * How we created our subset. For 'pedagogical reasons,' we concentrated our analysis on US full-time developers. 
 * EDA to support our choices and make naive speculations. 
+
+  * For example, I initially kept gender and race because I wanted to see if they attributed to salary. I was happy to find that there were no significant differences in the average salary when considering various genders and races.
+  * **I want to make something clear:** This data can answer questions about employee salary differences, but we cannot answer questions about the likelihood of obtaining a developer job based on gender, race, or any other variables. 
 
 ### Clean up Data / Organize
 
@@ -178,21 +178,29 @@ This survey covered **many** different types of questions. Depending on your goa
 
    * Some column names did not match the questions and some questions did not have columns related to it in the dataset. WTF?
 4. **User Error?**
-   * In the survey it asks users what their salary is and if they inputted their answer in pay per week, month, or year. However, there was no column for the unit of measure specification. This would have been fine if they already converted the values to be uniform. But, they didn't. The majority of values in *Salary* were values like ```75000``` which obviously meant $75,000 per year. But then you'd run into ```5```. 5? 5 what? If that meant \$5000, then surely it could mean per month. That would make sense when I looked at the rest of that person's data. Well then what do you do with ```30000``` since 30K seems too low and 360K seems too high. 
+   * In the survey it asks users what their salary is and if they inputted their answer in pay per hour, week, month, or year. However, there was no column for the unit of measure specification. This would have been fine if they already converted the values to be uniform. But, they didn't. The majority of values in *Salary* were values like ```75000``` which obviously meant $75,000 per year. But then you'd run into ```5```. 5? 5 what? If that meant \$5000, then surely it could mean per month. That would make sense when I looked at the rest of that person's data. Well then what do you do with ```30000``` since 30K seems too low and 360K seems too high. 
    * So, I consulted Google and Google told me that the Average Computer Programmer Hourly Wage in the United States can range from **$15.84** and go up to **$54.74**. \$15 per hour is salary of \$27K, so I snipped the salaries that were less than that. 
 
 > If you were doing this professionally, more research would be appropriate.
 
-* What are the limitations of our talk? What we will be going over. What we won't be going over.
+#### Cleaning Summary
+
 * Missing Data
 * Dumb shit
-* Null Values
+* Null Values ('NA', 'I don't know', 'I prefer not to answer')
 * Making weird choices
-* Making Assumptions
-* Building a User Interface for Truth
-* Talk about each factor that we decided on
+* Making Assumptions (x probably isn't related to y)
+
 
 ### Data Mining/ Play with it
+
+- 
+
+### Make a Model 
+
+Model selection and assessment procedure.
+
+- What method we used to create a prediction model.
 
 How do we calculate the coefficients AND what do they mean? 
 
@@ -203,21 +211,21 @@ How do we calculate the coefficients AND what do they mean?
 - Then end with MLR (multiple linear regression) 
 - Allude to how things can get even crazier (transformations, splines, higher-order terms, etc.)
 
-### Make a Model 
-
-Model selection and assessment procedure.
-
-- What method we used to create a prediction model.
-
 ### Test / Confirm
 
-Note About:  Train / Test Split
 
+Note About:  Train / Test Split
 Note About: Dummy Variable Trap
 
 
 
 ---
+
+
+
+
+
+
 
 ###So The title of this speech was "Machine Learning in Production"
 
