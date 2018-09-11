@@ -76,7 +76,7 @@ This may be a little bit of an exaduration... if you don't learn this stuff you 
 Examples:
 
 *  Salary & Years Experience
-* 
+* Amount spent on gas & distance travelled on a road Trip
 
 ### Lojistic Regression
 
