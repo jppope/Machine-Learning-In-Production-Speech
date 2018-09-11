@@ -136,7 +136,7 @@
 					</script>
 				</section>
 
-				<section data-markdown data-transition="slide" data-background="#FFC300">
+				<section data-markdown data-transition="slide" data-background="#FA8072">
 					<script type="text/template">
 						### 2. [Stack Overflow 2018](https://insights.stackoverflow.com/survey/2018/) Survey Data
 						100,000+ developers took 30 min survey  
@@ -223,7 +223,7 @@
 					</script>
 				</section>
 
-				<section data-markdown data-transition="slide" data-background="#FFC300">
+				<section data-markdown data-transition="slide" data-background="#FA8072">
 					<script type="text/template">
 						### 3. Cleaning - Challenge 1
 						* Pick more than one.
@@ -239,7 +239,7 @@
 					</script>
 				</section>
 
-				<section data-markdown data-transition="slide" data-background="#FFC300">
+				<section data-markdown data-transition="slide" data-background="#FA8072">
 					<script type="text/template">
 						### Challenge 2
 						* Many levels & various 'NAs'
@@ -259,7 +259,7 @@
 					</script>
 				</section>
 
-				<section data-markdown data-transition="slide" data-background="#FFC300">
+				<section data-markdown data-transition="slide" data-background="#FA8072">
 					<script type="text/template">
 						### Challenge 2
 						* Solution : reduce number of levels  
@@ -274,7 +274,7 @@
 					</script>
 				</section>
 
-				<section data-markdown data-transition="slide" data-background="#FFC300">
+				<section data-markdown data-transition="slide" data-background="#FA8072">
 					<script type="text/template">
 						### Challenge 3
 						* User Error? (e.g. _Salary_)
@@ -286,7 +286,7 @@
 					</script>
 				</section>
 
-				<section data-markdown data-transition="slide" data-background="#FFC300">
+				<section data-markdown data-transition="slide" data-background="#FA8072">
 					<script type="text/template">
 						### Cleaning Summary
 						* Missing Data
@@ -297,33 +297,50 @@
 					</script>
 				</section>
 
-				<section data-markdown data-transition="slide" data-background="#FFC300">
-					<script type="text/template">
-						### Subset Data (Cleanup 1)
-						* Response variable: _Salary_ 
-						* X variables (continuous):
-							1. _YearsProgram_
-							2. _YearsCodedJob_ 
-						* X variables (categorical/dummy):
-							3. ProgramHobby   
-							4. webdev              
-							5. mobiledev     
-							6. ML   
-							7. graphic 
-							8. devOps  	
-							9. desktop   
-							10. database
-							11. embServ    
-							12. QA   
-							13. sysAdmin    
-							14. other 	 
-						* X variables (categorical/multi-level):
-							15. TabsSpaces	
-							16. University  
-							17. FormalEducation 
-							18. MajorUndergrad  
-							19. CompanySize  
-					</script>
+				<section data-transition="slide" data-background="#FA8072">
+					<h2>Data Subset</h2>
+					<div class="row">
+						<div class="column" style="width:50%; float:left; font-size:35px;">
+							<ul>
+								<li><b>Y variable:</b> Salary</li>
+								<li><b>X variables (continuous):</b>
+									<ol>
+										<li>YearsProgram</li>
+										<li>YearsCodedJob</li>
+									</ol>
+								</li>
+								<li><b>X variables (categorical):</b>
+									<ol start="3">
+										<li>ProgramHobby</li>
+										<li>webdev</li>
+										<li>mobiledev</li>
+										<li>ML</li>
+										<li>devOps</li>
+										<li>desktop</li>
+									</ol>
+								</li>
+							</ul>
+						</div>
+						<div class="column" style="width:50%; float:right; font-size:35px;">
+							<br>
+							<ul>
+								<li><b>X variables (categorical):</b>
+									<ol start="9">
+										<li>database</li>
+										<li>other</li>
+										<li>educBA</li>
+										<li>educMA</li>
+										<li>educPhD</li>
+										<li>tabs</li>
+										<li>smallComp</li>
+										<li>medComp</li>
+										<li>largeComp</li>
+									</ol>
+								</li>
+							</ul>
+						</div>
+					</div>
+					
 				</section>
 
 				<!--- Sacha's Slides End -->
