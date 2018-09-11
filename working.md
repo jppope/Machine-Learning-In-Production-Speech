@@ -85,13 +85,11 @@ Examples:
 Example:
 
 * Think of Shaquille Oneil, He's going to make all of his shots within 2-3 feet of the basket, He's going to miss pretty much every 3 pointer
-* If you recieve an email about viagra discounts... its probably spam.
+* If you recieve an email about viagra discounts... it's probably spam.
 
 
 
 ### Classification
-
-
 
 * Clustering algorithms (there's a bunch of groups find the groups)
 * Reinforcement learning (Rewards good behavior)
