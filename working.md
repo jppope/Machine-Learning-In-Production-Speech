@@ -1,9 +1,5 @@
 # Machine Learning in Production
 
-
-
-72.10.32.23
-
 Welcome, to another episode of IPAs and APIs ...the support group for people who are too awesome for other Tech meetups.
 
 Formalities...
@@ -57,9 +53,7 @@ Find me: @jppope and jonpauluritis.com
 
 ### Machine Learning Overview
 
-What is it...
-
-![Machine Learning](/Users/Pope/Desktop/Screen Shot 2018-09-08 at 8.25.08 AM.png)
+![Machine Learning](/Users/jonpauluritis/prototype/Machine-Learing-In-Production-Speech/slides/images/AI.png)
 
 
 
@@ -175,7 +169,7 @@ This survey covered **many** different types of questions. Depending on your goa
 [1] "Web developer; Mobile developer; Embedded applications/devices developer; Machine learning specialist; Data scientist; Graphic designer; Desktop applications developer"
 ```
 
-​	You can deal with this many ways, but what I did was create dummy variables for each category. So, there was one column per selection and if the user classified themselves as a web developer, then the value would be 1 and if not the value would be 0. There was about 20 unique categories. But, for this presentation I only created the top 11 categories.
+	You can deal with this many ways, but what I did was create dummy variables for each category. So, there was one column per selection and if the user classified themselves as a web developer, then the value would be 1 and if not the value would be 0. There was about 20 unique categories. But, for this presentation I only created the top 11 categories.
 
 2. **Some questions had many levels (even though you were only able to choose one) + different forms of 'NAs'.**
 
