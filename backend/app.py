@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+import os
 from flask import Flask, request, jsonify
 import logging
 import pandas as pd
@@ -11,7 +12,7 @@ try:
     from flask_cors import CORS  # The typical way to import flask-cors
 except ImportError:
     # Path hack allows examples to be run without installation.
-    import os
+#    import os
     parentdir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     os.sys.path.insert(0, parentdir)
 
@@ -33,46 +34,51 @@ CORS(app, resources=r'/*')
 def home():
     return("How about some Machine Learning?")
 
+# Predict
+#   Make a prediction based on 
 @app.route("/predict", methods=['POST'])
 def predict():
     if request.method == 'POST':
         try:
             data = request.get_json()
-            years_of_experience = float(data["YearsExperience"])
+            # @TODO: Validate Data
             
-            lin_reg = joblib.load("./data/linear_regression_model.pkl")
+            query_data = data["vars"]
+            
+            model = joblib.load("./data/linear_regression_model.pkl")
         except ValueError as e:
             return jsonify("Error in prediction - {}".format(e))
 
-        return jsonify(lin_reg.predict(years_of_experience).tolist())
+        return jsonify(model.predict(query_data).tolist())
 
-# @TODO: Alternative process for retraining
+
 # add new data
-# create new split?
 # test that training & test error rates are similar
-#   I.E. abort if everything is all fucked up
 @app.route("/retrain", methods=['POST'])
 def retrain():
     if request.method == 'POST':
         data = request.get_json()
 
         try:
-            # grab traing information stored on disk
+            # Grab traing information stored on disk
             X_train = joblib.load("./data/training_X.pkl")
             y_train = joblib.load("./data/training_y.pkl")
-            X_test = joblib.load("./data/testing_X.pkl")
+            
+            # Convert Array into DataFrame
+            params_data = np.array(data['vars'])
+            params_data = params_data.reshape(1, -1)
+            xRow = pd.DataFrame(params_data, columns=X_train.columns.values)
 
-            # append the new data to the existing data set
-            years_exp = np.append(X_train, data['YearsExperience'])
-            salary = np.append(y_train, data["Salary"])
-
-            # needs to be in the right format
-            years_exp = years_exp.reshape(-1,1)
-
+            # Create DataFrame from Salary
+            yRow = pd.DataFrame({'Salary': [data["Salary"]]})
+            
+            # Persisted Data with new data
+            all_data = X_train.append(xRow)
+            all_salaries = y_train.append(yRow)
+            
             # new regression
-            new_model = LinearRegression()
-            new_model.fit(years_exp, salary)
-
+            updated_model = LinearRegression()
+            updated_model.fit(all_data, all_salaries)
 
             # remove old training data
             os.remove("./data/linear_regression_model.pkl")
@@ -80,17 +86,16 @@ def retrain():
             os.remove("./data/training_y.pkl")
 
             # generate new training data
-            joblib.dump(new_model, "./data/linear_regression_model.pkl")
-            joblib.dump(years_exp, "./data/training_X.pkl")
-            joblib.dump(salary, "./data/training_y.pkl")
+            joblib.dump(updated_model, "./data/linear_regression_model.pkl")
+            joblib.dump(all_data, "./data/training_X.pkl")
+            joblib.dump(all_salaries, "./data/training_y.pkl")
 
             # sample prediction
-            # pred = new_model.predict(X_test)
-            # return jsonify(pred.tolist())
+            predict = updated_model.predict(data['vars'])
 
         except ValueError as e:
             return jsonify("Error when retraining - {}".format(e))
 
-        return jsonify("Retrained model successfully.")
+        return jsonify(predict.tolist())
 
 app.run(host='0.0.0.0', port=8000, debug=True)    
