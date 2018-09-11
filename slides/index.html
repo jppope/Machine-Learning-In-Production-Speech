@@ -50,9 +50,9 @@
 					<img src="images/frank.png" style="float:center; max-width: 40%">
 				</section>
 
-				<section data-transition="slide" data-background="#F08080" data-background-transition="zoom">
+				<section data-transition="slide" data-background="#FA8072" data-background-transition="zoom">
 					<h2 style="color:#F7F9F9">Me</h2>
-					<ul style="color:#F7F9F9; text-align:center">
+					<ul style="color:#F7F9F9">
 						<li>High School Valedictorian</li> 
 						<li>UCI - Pure Math BS & minor in Stats</li>
 						<li>Mathnasium Center Director</li>
@@ -63,10 +63,10 @@
 
 				<section data-markdown data-transition="slide" data-background="#FFC300" data-background-transition="zoom">
 					<script type="text/template">
-						### General Steps for a Data Project
-						1. Define Your Question(s).  
+						### General Steps
+						1. Decide interest(s). 
 						2. Get Data.  
-						3. Explore & Clean (data mining/EDA).  
+						3. Explore & Clean.  
 						4. Build a model.  
 						5. Test and confirm.  
 						6. Do Something with it!  
@@ -75,9 +75,9 @@
 
 				<section data-markdown data-transition="slide" data-background="#FFC300" data-background-transition="zoom">
 					<script type="text/template">
-						### Our Questions
-						1.   
-						2.   
+						### Scientfic Interests
+						1. Predict developer salary.
+						2. Learn what factors increase salary.
 					</script>
 				</section>
 
@@ -170,9 +170,25 @@
 
 				<section data-markdown data-transition="slide" data-background="#FFC300">
 					<script type="text/template">
-						### Some Challenges...
-						* Some variables had many levels (e.g. _CompanySize_ had 10 levels)
-						* Most variables had different forms of 'NAs'
+						### Challenge 1
+						* Pick more than one.
+						* _DeveloperType_
+						```
+						> StackOverFlow_Data$DeveloperType[2]
+						[1] "Web developer; Mobile developer; 
+						Embedded applications/devices developer; 
+						Machine learning specialist; 
+						Data scientist; Graphic designer; 
+						Desktop applications developer"
+						```
+					</script>
+				</section>
+
+				<section data-markdown data-transition="slide" data-background="#FFC300">
+					<script type="text/template">
+						### Challenge 2
+						* Many levels & various 'NAs'
+						* _CompanySize_
 						```R
 						Fewer than 10 employees : 218
 						10 to 19 employees : 279
@@ -190,7 +206,7 @@
 
 				<section data-markdown data-transition="slide" data-background="#FFC300">
 					<script type="text/template">
-						### Some Challenges...
+						### Challenge 2
 						* Solution : reduce number of levels  
 						```R
 						Nano (Fewer than 10 employees) : 218
@@ -200,6 +216,29 @@
 						```
 						~~I do not know : 61~~  
 						~~I prefer not to answer : 10~~
+					</script>
+				</section>
+
+				<section data-markdown data-transition="slide" data-background="#FFC300">
+					<script type="text/template">
+						### Challenge 3
+						* User Error? (e.g. _Salary_)
+						* Identify & make decisions    
+						<br>  
+
+						### Challenge 4
+						* Discrepanies in Info 
+					</script>
+				</section>
+
+				<section data-markdown data-transition="slide" data-background="#FFC300">
+					<script type="text/template">
+						### Cleaning Summary
+						* Missing Data
+						* Dumb shit
+						* Null Values
+						* Making weird choices
+						* Making Assumptions (y ~ x ?)
 					</script>
 				</section>
 
