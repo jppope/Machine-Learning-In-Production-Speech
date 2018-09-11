@@ -39,34 +39,168 @@
 		<div class="reveal">
 			<div class="slides">
 
+				<!--- Sacha's Slides Start -->
+				<section data-transition="slide" data-background="#4d7e65" data-background-transition="zoom">
+					<h2>What is a Data Scientist?</h2>
+					<img src="images/frank.png" style="float:center; max-width: 40%">
+				</section>
 
 				<section data-transition="slide" data-background="#4d7e65" data-background-transition="zoom">
-					<h2>Example Bio</h2>
-					<img src="http://placehold.it/250x250" style="float:left">
-					<br>
-					<ul>
-						<li>One</li>
-						<li>Two</li>
-						<li>Three</li>
-					</ul>
-
+					<h2>What is a Data Scientist?</h2>
+					<img src="images/modernDS.png" style="float:center; max-width: 40%">
 				</section>
 
 				<!-- slide --> 
 				<section data-markdown>
 					<script type="text/template">
-
-## Quick Explaination of APIs and IPAs
-
-For those of you who are new to the group, APIs and IPAs has only a little to do with either IPAs or APIs.
-
-...The original idea was stolen from the classical greek symposium... symposium was an all day drinking event where greek men and hetaera (extreme educated prostitutes), would get together and talk about technology, and philolsophy.
-
-We added a few things to the format, such as this spring we did a charity hackathon, and this fall I'd like to put together a project surrounding the election. But generally our meetup is Technology and Drinking.
-
-
+						### Stack Overflow 2017 Survey Data Output
+						```R
+						[1] "Respondent"                       "Professional"                    
+						[3] "ProgramHobby"                     "Country"                         
+						[5] "University"                       "EmploymentStatus"                
+						[7] "FormalEducation"                  "MajorUndergrad"                  
+						[9] "HomeRemote"                       "CompanySize"                     
+						[11] "CompanyType"                      "YearsProgram"                    
+						[13] "YearsCodedJob"                    "YearsCodedJobPast"               
+						[15] "DeveloperType"                    "WebDeveloperType"                
+						[17] "MobileDeveloperType"              "NonDeveloperType"                
+						[19] "CareerSatisfaction"               "JobSatisfaction"                 
+						[21] "ExCoderReturn"                    "ExCoderNotForMe"                 
+						[23] "ExCoderBalance"                   "ExCoder10Years"                  
+						[25] "ExCoderBelonged"                  "ExCoderSkills"                   
+						[27] "ExCoderWillNotCode"               "ExCoderActive"                   
+						[29] "PronounceGIF"                     "ProblemSolving"                  
+						[31] "BuildingThings"                   "LearningNewTech"                 
+						[33] "BoringDetails"                    "JobSecurity"                     
+						[35] "DiversityImportant"               "AnnoyingUI"                      
+						[37] "FriendsDevelopers"                "RightWrongWay"                   
+						[39] "UnderstandComputers"              "SeriousWork"                     
+						[41] "InvestTimeTools"                  "WorkPayCare"                     
+						[43] "KinshipDevelopers"                "ChallengeMyself"                 
+						[45] "CompetePeers"                     "ChangeWorld"                     
+						[47] "JobSeekingStatus"                 "HoursPerWeek"                    
+						[49] "LastNewJob"                       "AssessJobIndustry"               
+						[51] "AssessJobRole"                    "AssessJobExp"                    
+						[53] "AssessJobDept"                    "AssessJobTech"                   
+						[55] "AssessJobProjects"                "AssessJobCompensation"           
+						[57] "AssessJobOffice"                  "AssessJobCommute"                
+						[59] "AssessJobRemote"                  "AssessJobLeaders"                
+						[61] "AssessJobProfDevel"               "AssessJobDiversity"              
+						[63] "AssessJobProduct"                 "AssessJobFinances"               
+						[65] "ImportantBenefits"                "ClickyKeys"                      
+						[67] "JobProfile"                       "ResumePrompted"                  
+						[69] "LearnedHiring"                    "ImportantHiringAlgorithms"       
+						[71] "ImportantHiringTechExp"           "ImportantHiringCommunication"    
+						[73] "ImportantHiringOpenSource"        "ImportantHiringPMExp"            
+						[75] "ImportantHiringCompanies"         "ImportantHiringTitles"           
+						[77] "ImportantHiringEducation"         "ImportantHiringRep"              
+						[79] "ImportantHiringGettingThingsDone" "Currency"                        
+						[81] "Overpaid"                         "TabsSpaces"                      
+						[83] "EducationImportant"               "EducationTypes"                  
+						[85] "SelfTaughtTypes"                  "TimeAfterBootcamp"               
+						[87] "CousinEducation"                  "WorkStart"                       
+						[89] "HaveWorkedLanguage"               "WantWorkLanguage"                
+						[91] "HaveWorkedFramework"              "WantWorkFramework"               
+						[93] "HaveWorkedDatabase"               "WantWorkDatabase"                
+						[95] "HaveWorkedPlatform"               "WantWorkPlatform"                
+						[97] "IDE"                              "AuditoryEnvironment"             
+						[99] "Methodology"                      "VersionControl"                  
+						[101] "CheckInCode"                      "ShipIt"                          
+						[103] "OtherPeoplesCode"                 "ProjectManagement"               
+						[105] "EnjoyDebugging"                   "InTheZone"                       
+						[107] "DifficultCommunication"           "CollaborateRemote"               
+						[109] "MetricAssess"                     "EquipmentSatisfiedMonitors"      
+						[111] "EquipmentSatisfiedCPU"            "EquipmentSatisfiedRAM"           
+						[113] "EquipmentSatisfiedStorage"        "EquipmentSatisfiedRW"            
+						[115] "InfluenceInternet"                "InfluenceWorkstation"            
+						[117] "InfluenceHardware"                "InfluenceServers"                
+						[119] "InfluenceTechStack"               "InfluenceDeptTech"               
+						[121] "InfluenceVizTools"                "InfluenceDatabase"               
+						[123] "InfluenceCloud"                   "InfluenceConsultants"            
+						[125] "InfluenceRecruitment"             "InfluenceCommunication"          
+						[127] "StackOverflowDescribes"           "StackOverflowSatisfaction"       
+						[129] "StackOverflowDevices"             "StackOverflowFoundAnswer"        
+						[131] "StackOverflowCopiedCode"          "StackOverflowJobListing"         
+						[133] "StackOverflowCompanyPage"         "StackOverflowJobSearch"          
+						[135] "StackOverflowNewQuestion"         "StackOverflowAnswer"             
+						[137] "StackOverflowMetaChat"            "StackOverflowAdsRelevant"        
+						[139] "StackOverflowAdsDistracting"      "StackOverflowModeration"         
+						[141] "StackOverflowCommunity"           "StackOverflowHelpful"            
+						[143] "StackOverflowBetter"              "StackOverflowWhatDo"             
+						[145] "StackOverflowMakeMoney"           "Gender"                          
+						[147] "HighestEducationParents"          "Race"                            
+						[149] "SurveyLong"                       "QuestionsInteresting"            
+						[151] "QuestionsConfusing"               "InterestedAnswers"               
+						[153] "Salary"                           "ExpectedSalary"  
+						```
 					</script>
 				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+						### Some Challenges...
+						* Some variables had many levels (e.g. _CompanySize_ had 10 levels)
+						* Most variables had different forms of 'NAs'
+						```R
+						Fewer than 10 employees : 218
+						10 to 19 employees : 279
+						20 to 99 employees : 742
+						100 to 499 employees : 730
+						500 to 999 employees : 264
+						1,000 to 4,999 employees : 456
+						5,000 to 9,999 employees : 208
+						10,000 or more employees : 794
+						I do not know : 61
+						I prefer not to answer : 10
+						```
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+						### Some Challenges...
+						* Solution : reduce number of levels  
+						```R
+						Nano (Fewer than 10 employees) : 218
+						Small (10 to 99 employees) : 1021
+						Medium (100 to 999 employees) : 994
+						Large (1000+ employees) : 1458
+						```
+						~~I do not know : 61~~  
+						~~I prefer not to answer : 10~~
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+						### Subset Data (Cleanup 1)
+						* Response variable: _Salary_ 
+						* X variables (continuous):
+							1. _YearsProgram_
+							2. _YearsCodedJob_ 
+						* X variables (categorical/dummy):
+							3. ProgramHobby   
+							4. webdev              
+							5. mobiledev     
+							6. ML   
+							7. graphic 
+							8. devOps  	
+							9. desktop   
+							10. database
+							11. embServ    
+							12. QA   
+							13. sysAdmin    
+							14. other 	 
+						* X variables (categorical/multi-level):
+							15. TabsSpaces	
+							16. University  
+							17. FormalEducation 
+							18. MajorUndergrad  
+							19. CompanySize  
+					</script>
+				</section>
+
+				<!--- Sacha's Slides End -->
 
 				<section 
 					data-transition="slide" 
