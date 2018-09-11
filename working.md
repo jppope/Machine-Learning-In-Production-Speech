@@ -149,98 +149,49 @@ This may be a little bit of an exaduration... if you don't learn this stuff you 
 
 (Source: https://blog.dataiku.com/2016/07/06/fundamental-steps-data-project-success)
 
-### 1. Get Data
+### 1. Our Questions
 
-* Stack Overflow 2017 ???? [link!]
-* All the Variables
+### 2. Get Data
 
-```R
-  [1] "Respondent"                       "Professional"                    
-  [3] "ProgramHobby"                     "Country"                         
-  [5] "University"                       "EmploymentStatus"                
-  [7] "FormalEducation"                  "MajorUndergrad"                  
-  [9] "HomeRemote"                       "CompanySize"                     
- [11] "CompanyType"                      "YearsProgram"                    
- [13] "YearsCodedJob"                    "YearsCodedJobPast"               
- [15] "DeveloperType"                    "WebDeveloperType"                
- [17] "MobileDeveloperType"              "NonDeveloperType"                
- [19] "CareerSatisfaction"               "JobSatisfaction"                 
- [21] "ExCoderReturn"                    "ExCoderNotForMe"                 
- [23] "ExCoderBalance"                   "ExCoder10Years"                  
- [25] "ExCoderBelonged"                  "ExCoderSkills"                   
- [27] "ExCoderWillNotCode"               "ExCoderActive"                   
- [29] "PronounceGIF"                     "ProblemSolving"                  
- [31] "BuildingThings"                   "LearningNewTech"                 
- [33] "BoringDetails"                    "JobSecurity"                     
- [35] "DiversityImportant"               "AnnoyingUI"                      
- [37] "FriendsDevelopers"                "RightWrongWay"                   
- [39] "UnderstandComputers"              "SeriousWork"                     
- [41] "InvestTimeTools"                  "WorkPayCare"                     
- [43] "KinshipDevelopers"                "ChallengeMyself"                 
- [45] "CompetePeers"                     "ChangeWorld"                     
- [47] "JobSeekingStatus"                 "HoursPerWeek"                    
- [49] "LastNewJob"                       "AssessJobIndustry"               
- [51] "AssessJobRole"                    "AssessJobExp"                    
- [53] "AssessJobDept"                    "AssessJobTech"                   
- [55] "AssessJobProjects"                "AssessJobCompensation"           
- [57] "AssessJobOffice"                  "AssessJobCommute"                
- [59] "AssessJobRemote"                  "AssessJobLeaders"                
- [61] "AssessJobProfDevel"               "AssessJobDiversity"              
- [63] "AssessJobProduct"                 "AssessJobFinances"               
- [65] "ImportantBenefits"                "ClickyKeys"                      
- [67] "JobProfile"                       "ResumePrompted"                  
- [69] "LearnedHiring"                    "ImportantHiringAlgorithms"       
- [71] "ImportantHiringTechExp"           "ImportantHiringCommunication"    
- [73] "ImportantHiringOpenSource"        "ImportantHiringPMExp"            
- [75] "ImportantHiringCompanies"         "ImportantHiringTitles"           
- [77] "ImportantHiringEducation"         "ImportantHiringRep"              
- [79] "ImportantHiringGettingThingsDone" "Currency"                        
- [81] "Overpaid"                         "TabsSpaces"                      
- [83] "EducationImportant"               "EducationTypes"                  
- [85] "SelfTaughtTypes"                  "TimeAfterBootcamp"               
- [87] "CousinEducation"                  "WorkStart"                       
- [89] "HaveWorkedLanguage"               "WantWorkLanguage"                
- [91] "HaveWorkedFramework"              "WantWorkFramework"               
- [93] "HaveWorkedDatabase"               "WantWorkDatabase"                
- [95] "HaveWorkedPlatform"               "WantWorkPlatform"                
- [97] "IDE"                              "AuditoryEnvironment"             
- [99] "Methodology"                      "VersionControl"                  
-[101] "CheckInCode"                      "ShipIt"                          
-[103] "OtherPeoplesCode"                 "ProjectManagement"               
-[105] "EnjoyDebugging"                   "InTheZone"                       
-[107] "DifficultCommunication"           "CollaborateRemote"               
-[109] "MetricAssess"                     "EquipmentSatisfiedMonitors"      
-[111] "EquipmentSatisfiedCPU"            "EquipmentSatisfiedRAM"           
-[113] "EquipmentSatisfiedStorage"        "EquipmentSatisfiedRW"            
-[115] "InfluenceInternet"                "InfluenceWorkstation"            
-[117] "InfluenceHardware"                "InfluenceServers"                
-[119] "InfluenceTechStack"               "InfluenceDeptTech"               
-[121] "InfluenceVizTools"                "InfluenceDatabase"               
-[123] "InfluenceCloud"                   "InfluenceConsultants"            
-[125] "InfluenceRecruitment"             "InfluenceCommunication"          
-[127] "StackOverflowDescribes"           "StackOverflowSatisfaction"       
-[129] "StackOverflowDevices"             "StackOverflowFoundAnswer"        
-[131] "StackOverflowCopiedCode"          "StackOverflowJobListing"         
-[133] "StackOverflowCompanyPage"         "StackOverflowJobSearch"          
-[135] "StackOverflowNewQuestion"         "StackOverflowAnswer"             
-[137] "StackOverflowMetaChat"            "StackOverflowAdsRelevant"        
-[139] "StackOverflowAdsDistracting"      "StackOverflowModeration"         
-[141] "StackOverflowCommunity"           "StackOverflowHelpful"            
-[143] "StackOverflowBetter"              "StackOverflowWhatDo"             
-[145] "StackOverflowMakeMoney"           "Gender"                          
-[147] "HighestEducationParents"          "Race"                            
-[149] "SurveyLong"                       "QuestionsInteresting"            
-[151] "QuestionsConfusing"               "InterestedAnswers"               
-[153] "Salary"                           "ExpectedSalary"  
-```
+* [Stack Overflow 2018](https://insights.stackoverflow.com/survey/2018/)
+* Insert all the Variables.
 
 This survey covered **many** different types of questions. Depending on your goal, you don't need to use information from **every** variable you obtain.
 
 
-* How we created our subset. What difficult choices we needed to make (for 'pedagogical reasons' of course). 
+* How we created our subset. For 'pedagogical reasons,' we concentrated our analysis on US full-time developers. 
 * EDA to support our choices and make naive speculations. 
 
 ### Clean up Data / Organize
+
+#### Challenges
+
+1. **Some questions allowed you to pick more than one category that you fall under.**
+
+   Example: What kind of developer do you identify as? (*DeveloperType*)
+
+   Here are all the categories that respondent #2 thought described him best.
+
+```R
+> StackOverFlow_Data$DeveloperType[2]
+[1] "Web developer; Mobile developer; Embedded applications/devices developer; Machine learning specialist; Data scientist; Graphic designer; Desktop applications developer"
+```
+
+​	You can deal with this many ways, but what I did was create dummy variables for each category. So, there was one column per selection and if the user classified themselves as a web developer, then the value would be 1 and if not the value would be 0. There was about 20 unique categories. But, for this presentation I only created the top 11 categories.
+
+2. **Some questions had many levels (even though you were only able to choose one) + different forms of 'NAs'.**
+
+   Example: How many employees does the company you work for have? (*CompanySize*)
+
+   You can also deal with this many ways, but what I did was eliminate the 'NAs' and narrow down the categories. Particularly for *CompanySize* I created *Nano, Small, Medium, and Large.*
+
+3. **The Uninformed Statistician.**
+   * Some column names did not match the questions and some questions did not have columns related to it in the dataset. WTF?
+4. **User Error?**
+   * In the survey it asks users what their salary is and if they inputted their answer in pay per week, month, or year. However, there was no column for the unit of measure specification. This would have been fine if they already converted the values to be uniform. But, they didn't. The majority of values in *Salary* were values like ```75000``` which obviously meant $75,000 per year. But then you'd run into ```5```. 5? 5 what? If that meant \$5000, then surely it could mean per month. That would make sense when I looked at the rest of that person's data. Well then what do you do with ```30000``` since 30K seems too low and 360K seems too high. 
+   * So, I consulted Google and Google told me that the Average Computer Programmer Hourly Wage in the United States can range from **$15.84** and go up to **$54.74**. \$15 per hour is salary of \$27K, so I snipped the salaries that were less than that. 
+
+> If you were doing this professionally, more research would be appropriate.
 
 * What are the limitations of our talk? What we will be going over. What we won't be going over.
 * Missing Data
