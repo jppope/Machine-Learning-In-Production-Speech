@@ -76,7 +76,7 @@ This may be a little bit of an exaduration... if you don't learn this stuff you 
 Examples:
 
 *  Salary & Years Experience
-* 
+* Amount spent on gas & distance travelled on a road Trip
 
 ### Lojistic Regression
 
@@ -91,10 +91,48 @@ Example:
 
 ### Classification
 
-* Clustering algorithms (there's a bunch of groups find the groups)
-* Reinforcement learning (Rewards good behavior)
-* Artificial Neural Networks (Making ML harder by explaining with graphs)
-* Convolutional Neural Networks (In case explaining ANNs weren't hard enough)
+Example: 
+
+* Naive Bayes:
+
+
+
+| Beer   | Dark | IBUs > 100 | ABV > 5.2 | Total Beers |
+| ------ | ---- | ---------- | --------- | ----------- |
+| IPA    | 0    | 400        | 250       | 500         |
+| Stout  | 400  | 0          | 150       | 300         |
+| Other  | 100  | 100        | 100       | 200         |
+| Totals | 500  | 500        | 500       | 1000        |
+
+So from the table what do we already know?
+
+- 50% of the Beers are IPAs
+- 30% are Stouts
+- 20% are other Beers
+
+Based on our training set we can also say the following:
+
+Beer #1 => Light, Hoppy, 5.4% (1, 0.8, 0.5, 0.5) =  
+
+
+
+### Clustering algorithms
+
+Example:
+
+* The Research Triangle in North Carolina. Given a lat/ long of a student address guess which University they go to. 
+
+
+
+### Reinforcement learning (Rewards good behavior)
+
+
+
+### ANNs and CNNs (Going deep)
+
+
+
+
 
 
 
