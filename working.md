@@ -47,8 +47,6 @@ But before we get into the meat and potatoes, let me tell you a little bit about
 
 Find me: @jppope and jonpauluritis.com
 
-* 
-
 
 
 ### Machine Learning Overview
@@ -69,18 +67,44 @@ or put another way...
 
 This may be a little bit of an exaduration... if you don't learn this stuff you are probably going to be out of a job.
 
-#### Machine learning has a lot of subtopics:
 
-* Supervised Learning (I know what I want)
-* Unsupervised Learning (Here's data, tell me something I didn't know)
 
-* Regression (how this thing relates to this other thing), 
-* Classification (how these things are alike and different)
+##Machine learning has a lot of subtopics:
+
+#### Supervised Learning versus Unsupervised Learning 
+
+![Supervised](/Users/jonpauluritis/prototype/Machine-Learing-In-Production-Speech/slides/images/supervisedUnsupervised.jpg)
+
+
+
+### Linear Regression 
+
+
+
+Examples:
+
+*  Salary & Years Experience
+* 
+
+### Lojistic Regression
+
+![example](/Users/jonpauluritis/prototype/Machine-Learing-In-Production-Speech/slides/images/LogisticRegression.png)
+
+Example:
+
+* Think of Shaquille Oneil, He's going to make all of his shots within 2-3 feet of the basket, He's going to miss pretty much every 3 pointer
+* If you recieve an email about viagra discounts... its probably spam.
+
+
+
+### Classification
+
+
+
 * Clustering algorithms (there's a bunch of groups find the groups)
 * Reinforcement learning (Rewards good behavior)
 * Artificial Neural Networks (Making ML harder by explaining with graphs)
 * Convolutional Neural Networks (In case explaining ANNs weren't hard enough)
-
 * Deep learning (Another reason to buy Google, Amazon, and Microsoft Stock)
 
 
