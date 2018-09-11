@@ -25,23 +25,15 @@ How many of you hate it when a speaker polls you at the beginning of a speech?
 
 Yea... me too. Lol
 
-So I was a sales guy and as a sales guy they professionally trained and taught me how to give a proper speech... so now you know why this is going to suck so bad
+[We're going to do the drinking feedback version of hands...]
 
-### Three goals:
+### Goal of this Speech
 
-1. Machine learning is hotter than doughnut grease right now... we'd like to make it more approachable, and give you a "Developers intro"
-2. Help y'all understand what you should be getting paid
-3. Entertain and Delight.
+> Expose you to a basic Machine Learning Production process, and then show a "deployed" version of the data model
 
 ### Sacha and I will be Tag teaming this one...
 
 She's going to cover the data science portion and like all good husband I'm going to do all the hard work. Just kidding.
-
-Actually though I'll tell a quick story... we went on a mini-honeymoon mid-august and when we stopped for lunch, the guide was like... okay everyone lunch is ready, now just to prove that chivalry is not dead we are going to let the only woman on this trip go ahead of everyone else so she can make her husband a sandwich.
-
-Lol. Sacha is the brains of the operation.
-
-But before we get into the meat and potatoes, let me tell you a little bit about me, and then Sacha can tell you a little bit about herself :slightly_smiling_face:
 
 ### About Me
 
@@ -50,8 +42,8 @@ Find me: @jppope and jonpauluritis.com
 
 
 ### Machine Learning Overview
-
 ![Machine Learning](/Users/jonpauluritis/prototype/Machine-Learing-In-Production-Speech/slides/images/AI.png)
+
 
 
 
@@ -105,11 +97,7 @@ Example:
 * Reinforcement learning (Rewards good behavior)
 * Artificial Neural Networks (Making ML harder by explaining with graphs)
 * Convolutional Neural Networks (In case explaining ANNs weren't hard enough)
-* Deep learning (Another reason to buy Google, Amazon, and Microsoft Stock)
 
-
-
- Twitter handle/ Github handle
 
 
 
@@ -240,13 +228,13 @@ How do we calculate the coefficients AND what do they mean?
 
 ### Test / Confirm
 
-Train / Test Split --> k-fold cross-validation
 
-Purpose => 
-
-Dummy Variable Trap
+Note About:  Train / Test Split
+Note About: Dummy Variable Trap
 
 
+
+---
 
 
 
@@ -268,7 +256,7 @@ What are the best libraries / frameworks out there for productionizing ML?
 
 Link
 
-[Reddit Image]
+![Reddit Image](/Users/Pope/stormcloud/github/mlSpeech/slides/images/redditQuestions.png)
 
 Answers: 
 
@@ -283,7 +271,7 @@ Answers:
 
 Or sometimes you get diagrams like this: 
 
-
+![complex](/Users/Pope/stormcloud/github/mlSpeech/slides/images/dataLake.png)
 
 ### If you stop and think about why there isn't a REALLY simple answer... 
 
@@ -325,11 +313,11 @@ Andrew Ng Talks talked about this in his "state of artificial intelligence" spee
 
 This creates a cycle
 
-[data cycle]
+![data cycle](/Users/Pope/stormcloud/github/mlSpeech/slides/images/dataCycle.png)
 
 
 
-### !!!Takeaway: This whole cycle is machine learning in production...!!!
+### Takeaway: This whole cycle is machine learning in production...
 
 (key difference between a software application and an AI / Machine Learning)
 
@@ -341,11 +329,10 @@ This creates a cycle
 
 ### What does a basic web application deployment look like:
 
-
-
 1) Data Model
 
 2) Some sort of an interface
 
-3) Users
+3) A User. 
 
+![Basic](/Users/Pope/stormcloud/github/mlSpeech/slides/images/basic.png)
