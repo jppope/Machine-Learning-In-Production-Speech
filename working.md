@@ -49,17 +49,9 @@ But before we get into the meat and potatoes, let me tell you a little bit about
 
 ### About Me
 
-Twitter handle/ Github handle
+Find me: @jppope and jonpauluritis.com
 
-Because I'm already conceited enough I actually prefer to lead an "anti resume" when talking about myself. This was popularized by princeton professor Johannes Haushofer. 
-
-* I almost failed out of high school because I used to like to skip class and hang out and read in library. I'd go surfing when the waves were nice too. 
-* The direct result of my hard work in high school was that I was only let into Universities that liked my SAT scores. Thank god for the University of Kansas #Rock Chalk. The admissions have gotten harder. 
-* When I made my way into the professional world, I didn't find a "real" job for about 18 months.
-* Eventually I did however, and after 4.5 years of 70 hour weeks I made my way to the peak of my career when I promoted to run NYC for verizon's largest retailer... only to be demoted for sending funny corporate emails a couple months later. 
-* Along the way I've almost died a bunch of times, included in that list are things like almost being drowned by a pod of dolphins, jumping off of a cliff into 2 ft of water in a rock quarry, almost being hit by a subway to impress a girl, and other funnier stories that I won't say in public. 
-
-I mention all of this primarily to point out that if a guy like me, an American that was almost deported to Canada, can learn machine learning you can too. 
+* 
 
 
 
@@ -278,22 +270,98 @@ Dummy Variable Trap
 
 
 
+###So The title of this speech was "Machine Learning in Production"
+
+Right now we have a Machine Learning Model... So how does one "put a model in production"? 
+
+A year ago I went looking for this answer... and I got really confused though... because the answer is not a straight forward thing.
+
+
+
+### Here's an example of a guy trying to figure this out:
+
+What are the best libraries / frameworks out there for productionizing ML?
+
+Link
+
+[Reddit Image]
+
+Answers: 
+
+- Caffe2 (Deep learning framework)
+- Tensor Flow (ML framework)
+- ONNX (Open Neural Network Exchange ... Format)
+- NVIDIA TensorRT if you are using GPU (Hardware Manufacturers interface?)
+- "Docker Flask Redis Tensorflow" (Containers, micro framework, key-value store, ML framework)
+- Scikit-learn (Framework for doing simple ML)
+
+
+
+Or sometimes you get diagrams like this: 
+
+
+
+### If you stop and think about why there isn't a REALLY simple answer... 
+
+With a web app... you are a deploying a piece of software or the product. 
+
+Take this thing here and put it over there so people can use it
+
+
+
+That is not the case for machine learning though... 
+
+
+
+What are people primarily using Machine Learning for Today
+
+- Search (Google, Bing)
+- Recommendation Alogrithms (Netflix, Amazon) 
+- Identifying Credit Card fraud (PayPal, Major Banks)
+- Financial Trading. (Renaissance Capital)
+- Reinforcement Learning... Multiarmed bandit problem for ads (Advertising Companies)
+- Political Manipulation (Cambridge Analytica)
+
+Where is it going?
+
+- Driverless cars (Tesla, Waymo, Uber, Cruise, Drive.ai, etc)
+- Robotics (Boston dynamics)
+- Healthcare (IBM Watson)
+- Celebrity Porn (Deep Fakes)
+
+
+
+### Top Level view. 
+
+Andrew Ng Talks talked about this in his "state of artificial intelligence" speech
+
+- Strategic data acquisition 
+- Create a interface/product from data
+- Users use interface/ product and generate data
+
+This creates a cycle
+
+[data cycle]
+
+
+
+### !!!Takeaway: This whole cycle is machine learning in production...!!!
+
+(key difference between a software application and an AI / Machine Learning)
 
 
 
 
-### Do Something with it 
 
-... and into Production
+## Lets get practical 
 
-From what I can tell if you talk to the data science people "Into Production" basically means:
-
-"I turned over my findings so that the other people can do stuff with it"
+### What does a basic web application deployment look like:
 
 
 
-From a web development background getting something into production is simple. Git pull on your server, then direct your domain name to port 80.
+1) Data Model
 
-What is production anyway?
+2) Some sort of an interface
 
-## End really really well!!!!
+3) Users
+

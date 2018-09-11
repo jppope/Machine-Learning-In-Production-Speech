@@ -12,7 +12,6 @@ from sklearn.linear_model import LinearRegression
 from sklearn.externals import joblib
 
 
-
 # Importing the dataset
 dataset = pd.read_csv('./data/stackOverflowSalaryData.csv')
 
