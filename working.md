@@ -245,7 +245,8 @@ This survey covered **many** different types of questions. Depending on your goa
 
 ### Data Mining/ Play with it
 
-- 
+- EDA Plots
+- End with what subset of Data we used.
 
 ### Make a Model 
 
@@ -263,7 +264,6 @@ How do we calculate the coefficients AND what do they mean?
 - Allude to how things can get even crazier (transformations, splines, higher-order terms, etc.)
 
 ### Test / Confirm
-
 
 Note About:  Train / Test Split
 Note About: Dummy Variable Trap
@@ -361,7 +361,7 @@ This creates a cycle
 
 
 
-## Lets get practical 
+## Let's get practical 
 
 ### What does a basic web application deployment look like:
 
