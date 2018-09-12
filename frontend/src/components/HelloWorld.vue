@@ -2,7 +2,7 @@
   <div class="hello">
 		<div class="notification is-success" style="z-index:100; position: fixed; left: 0; right: 0; margin: auto" v-if="show">
 			<button class="delete"></button>
-			Your Predicted Salary is: ${{pred}} USD
+			Your Predicted Salary is: ${{pred}} USD / SoCal Adjusted ${{ pred * 1.15 }}
 		</div>
 		<div class="columns">
 			<div class="column"></div>
@@ -243,6 +243,11 @@
 								</div>
 							</div>
 
+						<blockquote>
+							In a complete twist of irony...
+							Stack overflow built the same calculator and sent us an email yesterday,
+							knowing that the speech was going to happen
+						</blockquote>
 						</div>
 					</div>
 					<footer class="card-footer">
@@ -253,6 +258,9 @@
 			</div>
 			<div class="column"></div>
 		</div>
+		<br>
+		<br>
+		<br>
   </div>
 </template>
 
