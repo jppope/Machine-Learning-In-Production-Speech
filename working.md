@@ -164,10 +164,42 @@ Has anyone ever been asked...
 
 * I don't want to scare you, but there are some stats concepts that I'll be going over in my part of the talk. These are things you **should** **understand** or at least be **aware** of.
 * To me, ML is Statistics on steriods. 
-* Don't tell us we didn't warn you.
-* Let's start easy. Y=mx + b.  
+* Don't tell us we didn't warn you. 
 
-* 3D Plot Source: https://se.mathworks.com/help/stats/regress.html
+#### Terminology
+
+* In math and stats there are always synonyms for the same thing. Not sure why. It's a pain. But, I want you to be aware of the synonyms for the X variables. BC I might use any of these during this talk. 
+* Predictors
+* Regressors
+* Covariates
+* Explanatory vars
+* Independent vars
+* X vars 
+
+#### Line
+
+* Let's start easy. Y=mx + b.  
+* You can do this by hand no problem.
+* Just a rise over run situation.
+
+#### SLR
+
+* But, that's unrealistic. What happens when you have more than 2 observations? What happens when you have a sample of size n?
+  * Error term is needed! We have noise! We need to make assumptions. We also need to make sure those assumptions are justifiable. (Confession: I totally did not do model diagnostics for error assumptions in this project; Professor Dan would be shaking his head right about now.)
+* Our slope still looks like a ratio; not quite Rise over Run. We take the x's and subtract them from their mean. That produces what is called mean-centered terms. We do the same for the y's and then multiply them both and add them up. This is called the covariance between X and Y. Then, we do the same for the denominator but just with the x's. 
+* And finding the intercept is very similar to previous slide except with averages instead.
+
+#### MLR
+
+* What happens when you have more than one predictor variable? 
+* We need linear algebra! Finding the regression coefficients (the 'b's) is an iterative process otherwise. Linear algebtra makes it easier. 
+* This is the model we will be fitting. We will not go over transformations, splines, or Generalized Linear Models (GLMs) like Logistic Regression.
+* Beta is now a vector that contains all the regression coefficients. 
+* The formula is complex but at least it still involves the X and Y values. 
+* Another important thing to note is $X^TX$ must be invertible. Meaning, you can't have any dependent columns in $X$ matrix. Meaning you can have dependent variables. An easy example would be one column that asks for temperature in Fahernheit and then another column with that temperature in Celcius. These are directly dependent. 
+* I can go further with dependent predictors but I won't now bc of time.
+
+(3D Plot Source: https://se.mathworks.com/help/stats/regress.html)
 
 ### The Project
 
@@ -175,15 +207,6 @@ Has anyone ever been asked...
 * I was surprised to find that the majority of a Machine Learning included a lot of what I have been studying this past year. It's a lot of Statistics, actually.   
 
 ### General Steps 
-
-0. Define Your Question(s)
-
-1. Get Data
-2. Clean Up/Organize
-3. Data Mining / Play with it!
-4. Build a Model
-5. Test and Confirm
-6. If you want...Do something with it! 
 
 *I will go over Steps 1-5 and Jon will talk about Step 6.* 
 
