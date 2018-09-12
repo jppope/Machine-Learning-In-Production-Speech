@@ -341,7 +341,13 @@ How do we calculate the coefficients AND what do they mean?
 Note About:  Train / Test Split
 Note About: Dummy Variable Trap
 
+### Final Model
 
+```R
+
+```
+
+$$Salary = b_0 + b_1ProgramHobby + b_2YearsProgram + b_3YearsCodedJob + b_4webdev + b_5mobiledev + b_6ML + b_7devOps + b_8desktop + b_9database + b_{10}other + b_{11}educBA + b_{12}educMA + b_{13}educPhD + b_{14}tabs + b_{15}smallComp + b_{16}medComp + b_{17}largeComp$$
 
 ---
 
