@@ -165,7 +165,9 @@ Has anyone ever been asked...
 * I don't want to scare you, but there are some stats concepts that I'll be going over in my part of the talk. These are things you **should** **understand** or at least be **aware** of.
 * To me, ML is Statistics on steriods. 
 * Don't tell us we didn't warn you.
-* Let's start easy. Y=mx + b. 
+* Let's start easy. Y=mx + b.  
+
+* 3D Plot Source: https://se.mathworks.com/help/stats/regress.html
 
 ### The Project
 
@@ -283,7 +285,16 @@ You saw this before in hot pink. I wanted to play with these a little and separa
 * What is INTERESTING is the orange curve. 
 * It looks like on average non-males have higher salaries early in their coding experience  than males! And then the reverse seems true after around 12 years of experience.
 * However....
-* Sometimes, these things can h
+* Sometimes, you need to consider sample size differences across the different X levels. Sample size differences can show things like this.
+* Without further investigation, making claims based on this single mean plot can be DANGEROUS. 
+* This second plot shows the power of small sample sizes a little better.
+* You see more orange dots pre-10 years but post-10 years the sample sizes are small AND most the dots have lower salaries. Our density plots showed us why that was. 
+
+#### Boxplot
+
+* This one is a little obvious, but I at least wanted to give you an example of a boxplot with categorical variables. 
+* I also included the sample sizes of each group. 
+* I think it's fair to say that average salary and distribution seems the same between those who graduated with a bachelors vs those who had lower formal education. 
 
 
 
