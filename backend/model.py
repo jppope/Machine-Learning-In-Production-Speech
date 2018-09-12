@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+# NOTE: This code could do either a simple or multi linear regression
+#
 # Importing the libraries
 import numpy as np
 import matplotlib.pyplot as plt
@@ -40,7 +42,8 @@ arr += ['spaces']
 X = X.drop(arr, axis=1)
 
 
-# Test/ Train split
+# Test/ Train split 
+# ... In Case you want to do Simple Linear with this code.
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state = 0)
 
 
