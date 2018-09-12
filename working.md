@@ -67,11 +67,7 @@ This may be a little bit of an exaduration... if you don't learn this stuff you 
 
 ![Supervised](/Users/jonpauluritis/prototype/Machine-Learing-In-Production-Speech/slides/images/supervisedUnsupervised.jpg)
 
-
-
 ### Linear Regression 
-
-
 
 Examples:
 
@@ -139,34 +135,42 @@ Example:
 
 ## Data Science
 
+### Hello Everyone.
+
+This is me. My twitter handle and website if you're interested.
+
+Has anyone ever been asked...
+
 ### What is a data scientist? 
 
-* I found this image and emailed it to my whole family because they kept asking me what the heck I was doing with my time.
-
-* Jon's definition of a data scientist is : a statistician that works with data that is too big to fit on one computer. 
-* I, personally, have a tough time explaining what a data scientist is. But it is the career I'm trying to pursue right now. And, my family is always asking. What are you studying? What can you do with that degree? I quickly grew tired of trying to explain this new and wonderful Data Science career, so I turned to Google for help. And I was satisfied with pictures and diagrams I found. Who doesn't like pictures? 
-* I chose this image to email my whole family so they'd stop asking me...They have a male figure, but I like this one for obvious reasons.
-* And since Halloween is coming up...I also wanted to share this one!
-* So now, my standard reply is : Imagine if Computer Science, Mathematics, and Statistics had a baby. Scientific, right? But, I feel like it works. 
+* I have. plenty. Ever since I started my Masters program. I'm first gen in my family and to them statistician = actuary. 
+* But, it's a whole new thing! The "sexiest job of the 21st century" they call it. 
+* I found this on Google and sent this to my whole family.  It makes me look cool. 
+* So now my standard reply at a cocktail party is : "Imagine if you took the three hardest subjects in the world: Math, Computer Science, and Statistics." That's what I do.
 
 (Source: https://en.wikibooks.org/wiki/Data_Science)
 
 ### About Sacha
 
-- My math and stats interest began in high school. I graduated Corona High as valedictorian. 
-- Although I was accepted to Berkeley, UCLA, and UC San Diego, I decided to go to UCI. 
+- Here's me in three simple bulletpoints. My math and stats career started just after high school.
+- I could have gone to Berkeley, UCLA, or UC San Diego, but I chose UCI for reasons that made sense at the time. 
 - After changing my major 6 times or so, I then pursued and completed a Pure Math degree with a minor in statistcs. 
 - After graduation, I ran a few tutoring centers for Mathnasium Corporation for about 2 years. 
-- Then, I wanted to go back to school for Statistics. So, I left Mathnasium, tutored on the side for extra cash, studied for the GRE, and researched schools. Fate brought me back to UCI. 
-- And that's where I am now. 
+- Fate dragged me back to UCI. Where I am now to complete my Masters degree this coming Spring in Stats. 
 - Some irrelevant, but fun facts about me...I love teaching, I can sing, and my recent obsessions are gardening, horticulture, & insects.
-- Anyhow, we've been doing IPAs and APIs since August 2015. We love it, and we're really glad you're here after our small hiatus since April. So, thank you.  
+- Anyhow, we've been doing IPAs and APIs since August 2015. We love it, and we're really glad you're here after our small hiatus since April. So, thank you. 
+
+### Linear Regression Explanation
+
+* I don't want to scare you, but there are some stats concepts that I'll be going over in my part of the talk. These are things you **should** **understand** or at least be **aware** of.
+* To me, ML is Statistics on steriods. 
+* Don't tell us we didn't warn you.
+* Let's start easy. Y=mx + b. 
 
 ### The Project
 
 * So, let's talk about the project. 
-* I was surprised to find that the majority of a Machine Learning included a lot of what I have been studying this past year. It's a lot of Statistics, actually. 
-* BUT, I don't want to scare you. You don't need a degree in Stats to do this. However, later, I will go over a few stats concepts you **should** know. 
+* I was surprised to find that the majority of a Machine Learning included a lot of what I have been studying this past year. It's a lot of Statistics, actually.   
 
 ### General Steps 
 
@@ -247,6 +251,41 @@ This survey covered **many** different types of questions. Depending on your goa
 
 - EDA Plots
 - End with what subset of Data we used.
+
+#### Salary Histogram
+
+You saw this before in hot pink. I wanted to play with these a little and separate them by Gender. We didn't use Gender in our Prediction Model, but I thought it was interesting to show. Male is in purple (as you know the majority of developers are male), and non-male is in orange (this includes what was labeled as Females, Transgender, non-conforming, or Other).
+
+* The sampling distribution of Salary look fairly similar between the groups. [Note: our min salary is 27K]
+* When working with groups that are unbalanced, a histogram can be a little unclear or misleading. Density graphs are much better.
+
+#### Salary Density
+
+* Better! We can see that the range is similar, but the averages may be slightly different. See how non-males have a higher density in the lower ranges of Salary and males have a higher density in the higher ranges of Salary?
+
+* Well this is only a marginal view. I was suspicious. Maybe there were confounding variables that made this the case.
+* Can anyone think of a reason for this?
+
+#### Years of Coding! (densities)
+
+* Years of coding is a confounding variable. 
+* A larger proportion of non-males are less young in the coding world! 
+* A larger proportion of those experienced with coding are males.
+* The same is true with Years Coded in general and Years Coded professionally. 
+* Give it time. I'm sure that the salary density plot will converge to be similar. 
+
+#### Mean Plots!
+
+* You may be less experienced with mean plots
+* They are very popular in time-series analysis, but I liked using it here because if we just had a scatterplot, it would be a little difficult to see the upward trend.
+* A mean plot is basically a scatterplot between X and Y with a smooth curve running through the averages of every X level. You're won't always see straight lines.
+* What's not surprising is the more you code in general the higher salary you have.
+* What is INTERESTING is the orange curve. 
+* It looks like on average non-males have higher salaries early in their coding experience  than males! And then the reverse seems true after around 12 years of experience.
+* However....
+* Sometimes, these things can h
+
+
 
 ### Make a Model 
 
