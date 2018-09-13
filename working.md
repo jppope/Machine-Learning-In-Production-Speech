@@ -321,20 +321,13 @@ You saw this before in hot pink. I wanted to play with these a little and separa
 
 
 
-### Make a Model 
+### Model Selection & Assessment
 
-Model selection and assessment procedure.
+#### General Steps
 
-- What method we used to create a prediction model.
-
-How do we calculate the coefficients AND what do they mean? 
-
-- synonyms for coefficients
-- synonyms for covariates=regressors=predictors=variables=independent variables = X
-- Start with the basic y=mx+b two points scenario (what was taught in school)
-- Then go over OLS (ordinary least squares) or SLR (simple linear regression)
-- Then end with MLR (multiple linear regression) 
-- Allude to how things can get even crazier (transformations, splines, higher-order terms, etc.)
+- AIC, BIC, & Cross-Validation are estimates of EPE (expected prediction error). We want to minimize the EPE. So, we want these to be small.
+- RSS is not strong for this because it necessarily decreases. The more predictors you have, the better the fit. You would think that's what you want, but you don't ultimately want to decrease prediction error of your sample. You want to minimize prediction error for new observations outside of your sample. 
+- More predictors means overfitting. We do not want overfitting.
 
 ### Test / Confirm
 
@@ -343,11 +336,7 @@ Note About: Dummy Variable Trap
 
 ### Final Model
 
-```R
 
-```
-
-$$Salary = b_0 + b_1ProgramHobby + b_2YearsProgram + b_3YearsCodedJob + b_4webdev + b_5mobiledev + b_6ML + b_7devOps + b_8desktop + b_9database + b_{10}other + b_{11}educBA + b_{12}educMA + b_{13}educPhD + b_{14}tabs + b_{15}smallComp + b_{16}medComp + b_{17}largeComp$$
 
 ---
 
