@@ -196,7 +196,7 @@ Has anyone ever been asked...
 * This is the model we will be fitting. We will not go over transformations, splines, or Generalized Linear Models (GLMs) like Logistic Regression.
 * Beta is now a vector that contains all the regression coefficients. 
 * The formula is complex but at least it still involves the X and Y values. 
-* Another important thing to note is $X^TX$ must be invertible. Meaning, you can't have any dependent columns in $X$ matrix. Meaning you can have dependent variables. An easy example would be one column that asks for temperature in Fahernheit and then another column with that temperature in Celcius. These are directly dependent. 
+* Another important thing to note is $X^TX$ must be invertible. Meaning, you can't have any dependent columns in $X$ matrix. Meaning you can NOT have dependent variables. An easy example would be one column that asks for temperature in Fahernheit and then another column with that temperature in Celcius. These are directly dependent. 
 * I can go further with dependent predictors but I won't now bc of time.
 
 (3D Plot Source: https://se.mathworks.com/help/stats/regress.html)
@@ -208,71 +208,32 @@ Has anyone ever been asked...
 
 ### General Steps 
 
-*I will go over Steps 1-5 and Jon will talk about Step 6.* 
+*I will go over Steps 1-5 and Jon will talk about Step 6.*  
 
 (Source: https://blog.dataiku.com/2016/07/06/fundamental-steps-data-project-success)
 
 ### 1. Our Questions
 
-1. As a developer seeking employment, how do I increase my salary? What factors negatively/positively impact my salary? 
-2. To create a prediction model that will calculate an 'appropriate' salary given a new set of specific covariate values (information), which is expected to come from an employer or job-seeking developer.
-
 ### 2. Get Data
 
 * [Stack Overflow 2018](https://insights.stackoverflow.com/survey/2018/)
-* Insert all the Variables.
 
 This survey covered **many** different types of questions. Depending on your goal, you don't need to use information from **every** variable you obtain.
 
 
 * How we created our subset. For 'pedagogical reasons,' we concentrated our analysis on US full-time developers. 
-* EDA to support our choices and make naive speculations. 
-
-  * For example, I initially kept gender and race because I wanted to see if they attributed to salary. I was happy to find that there were no significant differences in the average salary when considering various genders and races.
-  * **I want to make something clear:** This data can answer questions about employee salary differences, but we cannot answer questions about the likelihood of obtaining a developer job based on gender, race, or any other variables. 
+* Here's a small example of the type of information that was collected. 
 
 ### Clean up Data / Organize
 
 #### Challenges
 
-1. **Some questions allowed you to pick more than one category that you fall under.**
-
-   Example: What kind of developer do you identify as? (*DeveloperType*)
-
-   Here are all the categories that respondent #2 thought described him best.
-
-```R
-> StackOverFlow_Data$DeveloperType[2]
-[1] "Web developer; Mobile developer; Embedded applications/devices developer; Machine learning specialist; Data scientist; Graphic designer; Desktop applications developer"
-```
-
-	You can deal with this many ways, but what I did was create dummy variables for each category. So, there was one column per selection and if the user classified themselves as a web developer, then the value would be 1 and if not the value would be 0. There was about 20 unique categories. But, for this presentation I only created the top 11 categories.
-
-2. **Some questions had many levels (even though you were only able to choose one) + different forms of 'NAs'.**
-
-   Example: How many employees does the company you work for have? (*CompanySize*)
-
-   You can also deal with this many ways, but what I did was eliminate the 'NAs' and narrow down the categories. Particularly for *CompanySize* I created *Nano, Small, Medium, and Large.*
-
-3. **The Uninformed Statistician.**
-
-   * Some column names did not match the questions and some questions did not have columns related to it in the dataset. WTF?
-4. **User Error?**
-   * In the survey it asks users what their salary is and if they inputted their answer in pay per hour, week, month, or year. However, there was no column for the unit of measure specification. This would have been fine if they already converted the values to be uniform. But, they didn't. The majority of values in *Salary* were values like ```75000``` which obviously meant $75,000 per year. But then you'd run into ```5```. 5? 5 what? If that meant \$5000, then surely it could mean per month. That would make sense when I looked at the rest of that person's data. Well then what do you do with ```30000``` since 30K seems too low and 360K seems too high. 
-   * So, I consulted Google and Google told me that the Average Computer Programmer Hourly Wage in the United States can range from **$15.84** and go up to **$54.74**. \$15 per hour is salary of \$27K, so I snipped the salaries that were less than that. 
-
 > If you were doing this professionally, more research would be appropriate.
 
 #### Cleaning Summary
 
-* Missing Data
-* Dumb shit
-* Null Values ('NA', 'I don't know', 'I prefer not to answer')
-* Making weird choices
-* Making Assumptions (x probably isn't related to y)
 
-
-### Data Mining/ Play with it
+### 3. EDA
 
 - EDA Plots
 - End with what subset of Data we used.
@@ -326,8 +287,10 @@ You saw this before in hot pink. I wanted to play with these a little and separa
 #### General Steps
 
 - AIC, BIC, & Cross-Validation are estimates of EPE (expected prediction error). We want to minimize the EPE. So, we want these to be small.
+- R-squared is a statistical measure of how close the data are to the fitted regression line. How much of the Y is explained by the X's. It's important to include it, but not necessarily for the purposes of finding the best predictive model.
 - RSS is not strong for this because it necessarily decreases. The more predictors you have, the better the fit. You would think that's what you want, but you don't ultimately want to decrease prediction error of your sample. You want to minimize prediction error for new observations outside of your sample. 
 - More predictors means overfitting. We do not want overfitting.
+- R's MASS Library there is a function stepAIC.
 
 ### Test / Confirm
 
